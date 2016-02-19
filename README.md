@@ -1,6 +1,6 @@
 # lua-api-bot
 
-A simple telegram-bot wtitten in LUA
+A simple telegram-bot wtitten in LUA based on https://github.com/Imandaneshi/file-manager-bot
 
 # commands
 
@@ -51,8 +51,8 @@ sudo apt-get install lua
 Clone the bot
 
 ```
-git clone https://github.com/Imandaneshi/file-manager-bot.git
-cd file-manager-bot
+git clone https://github.com/pAyDaAr/lua-api-bot.git
+cd lua-api-bot
 
 ```
 
@@ -64,8 +64,9 @@ bot token in bot.lua (config part)
 
 ```lua
 
-local token = ""
-local BASE_URL = "https://api.telegram.org/bot"..token
+local bot_api_key = ""
+local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
+local BASE_FOLDER = ""
 ```
 
 And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
