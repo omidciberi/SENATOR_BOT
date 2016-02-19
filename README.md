@@ -1,74 +1,44 @@
-# File manager telegram bot
+# lua-api-bot
 
-A linux file manager telegram bot
+A simple telegram-bot wtitten in LUA
 
 # commands
 
- **cd [folder]**
+ **sticker to photo**
 
-`/cd /test/test`
+`just send a sticker`
 
- **ls**
+ **photo to sticker**
 
-`/ls`
+`just send a photo`
 
-  **mkdir [folder name]**
+  **bold text**
 
-`/mkdir new folder`
+`/bold text`
 
- **rmdir [folder name]**
+ **italic text**
 
-`/rmdir new folder`
+`/italic text`
 
- **rm [file name]**
+ **markdown link**
 
-`/rm test.mp3`
+`/link url text`
 
- **touch [file name]**
+# channel
 
-`/touch test.txt`
+ **send bold text to a channel**
 
- **cat [file name]**
+`/boldch @channelusername text`
 
-`/cat test.txt`
+ **send italic text to a channel**
 
- **tofile [file name] [text]**
+`/italicch @channelusername text`
 
-_Will create a file with name [file name] and will put [text] in it_
+ **send markdown link to a channel**
 
-`/tofile test.py print "Hello world !"`
+`/linkch @channelusername url text`
 
- **shell [command]**
 
-`/shell uptime`
-
- **cp [file] [dir]**
-
-`/cp test.png test/test`
-
- **mv [file] [dir]**
-
-`/mv test.png test/test`
-
- **upload [file name]**
-
-`/upload test.txt`
-
-`Will upload that file in current folder`
-
- **download <file name>**
-
-_will download that file you replied to_
-
- `/download`
-
-Bot will select a name automatically
-
-`/download [file name]`
-
-Bot will save file with [file name]
-
-_Bot can upload files up to 50 mg and download files up to 20 mg_
 
 # Installation
 
@@ -90,17 +60,12 @@ Then install bot using
 
 `bash launch.sh install`
 
-
-Then enter your base folder and telegram bot api key in bot.lua (config part)
+bot token in bot.lua (config part)
 
 ```lua
 
-local bot_api_key = ""
-local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
--- Base folder like
--- local BASE_FOLDER = "/home/imandaneshi/files/"
-local BASE_FOLDER = ""
-
+local token = ""
+local BASE_URL = "https://api.telegram.org/bot"..token
 ```
 
 And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
