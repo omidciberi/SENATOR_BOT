@@ -227,7 +227,7 @@ function msg_processor(msg)
 
  elseif msg.text:match("^/link (.*) (.*)") then
  local matches = { string.match(msg.text, "^/link (.*) (.*)") }
- local text = '['..matches[1]..']('..matches[2]..')'
+ local text = '['..matches[2]..']('..matches[1]..')'
  sendMessage(msg.chat.id, text, true, false, true)
 
 elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
