@@ -1,6 +1,6 @@
 # lua-api-bot
 
-A simple telegram-bot wtitten in LUA based on https://github.com/Imandaneshi/file-manager-bot
+A simple telegram-bot wtitten in LUA based on [file manager bot](https://github.com/Imandaneshi/file-manager-bot)
 
 # commands
 
@@ -24,6 +24,10 @@ A simple telegram-bot wtitten in LUA based on https://github.com/Imandaneshi/fil
 
 `/link url text`
 
+**code text**
+
+`/code text`
+
 # channel
 
  **send bold text to a channel**
@@ -38,7 +42,9 @@ A simple telegram-bot wtitten in LUA based on https://github.com/Imandaneshi/fil
 
 `/linkch @channelusername url text`
 
+**send code text to a channel**
 
+`/codech @channelusername text`
 
 # Installation
 
