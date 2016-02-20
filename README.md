@@ -87,4 +87,4 @@ Save bot.lua
 
 Start the bot
 
-`bash launch.sh`
+`lua bot.lua`
