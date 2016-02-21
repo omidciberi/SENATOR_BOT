@@ -193,7 +193,7 @@ function msg_processor(msg)
 
   elseif msg.photo then
 	local matches = { (msg.photo) }
-	file = msg.photo[2].file_id
+	file = msg.photo[3].file_id
 	local url = BASE_URL .. '/getFile?file_id='..file
 	local res = HTTPS.request(url)
 	local jres = JSON.decode(res)
