@@ -8,6 +8,44 @@ HTTPS = require('ssl.https')
 local bot_api_key = ""
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
+local start = [[HI
+/bold text 
+return bold text
+
+/italic text
+return italic text
+
+/link url text
+markdown link
+
+/code text
+return code text
+
+
+-channel
+add bot to a channel then use this commands
+
+/boldch @channelusername text
+send bold text to a channel
+
+/italicch @channelusername text
+send italic text to a channel
+
+/linkch @channelusername url text
+send markdown link to a channel
+
+/codech @channelusername text
+send code text to a channel
+
+
+-ohther
+
+sticker to photo 
+just send a sticker
+
+photo to sticker
+just send a photo
+]]
 -------
 
 ----utilites----
@@ -176,6 +214,7 @@ function bot_run()
 end
 
 function msg_processor(msg)
+	start = start..'\n[Source](https://github.com/pAyDaAr/lua-api-bot)'
 	if msg.new_chat_participant or msg.new_chat_title or msg.new_chat_photo or msg.left_chat_participant then return end
 	if msg.audio or msg.document or msg.video or msg.voice then return end -- Admins only !
 	if msg.date < os.time() - 5 then -- Ignore old msgs
@@ -247,6 +286,10 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local text = '`'..matches[2]..'`'
  local channel = matches[1]
  sendMessage(channel, text, true, false, true)
+
+elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[Hh]elp") then
+ local text = start
+ sendMessage(msg.chat.id, text, true, false, true)
 
 return end
 
