@@ -66,15 +66,15 @@ cd lua-api-bot
 
 Then install bot using
 
-`bash launch.sh install`
+`lua bot.lua`
 
 bot token in bot.lua (config part)
 
 ```lua
 
-local bot_api_key = ""
+local bot_api_key = "" -- token
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
-local BASE_FOLDER = ""
+local BASE_FOLDER = "" -- do not set this
 ```
 
 And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
